@@ -1,0 +1,18 @@
+import cv2 as cv2
+import numpy as np
+
+# Read the image
+img = cv2.imread(r"C:\Users\padra\Desktop\GCcYL1Za0AAUHb2.jpeg")
+
+# Apply the Canny edge detector
+applyCanny2 = cv2.Canny(img, 125, 175)
+
+# Display the result
+cv2.imshow("2nd Canny Edges", applyCanny2)
+
+# Save the processed image to a file
+cv2.imwrite(r"C:\Users\padra\Desktop\Processed_Image.jpg", applyCanny2)
+
+# Wait for a key press and close the window
+cv2.waitKey(0)
+cv2.destroyAllWindows()
